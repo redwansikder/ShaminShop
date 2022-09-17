@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 a,
 input,
 button,
@@ -17,7 +28,7 @@ body {
 }
 
 header {
-  padding: 2em;
+  padding: 1em 0;
   background-color: rgb(240, 255, 248);
 }
 
@@ -32,9 +43,10 @@ header {
 }
 
 .container {
-  width: 95%;
+  width: 96%;
   max-width: 640px;
   margin: 0 auto;
+  /* outline: 1px solid red; */
 }
 
 .nav-container {
@@ -70,5 +82,40 @@ header {
 
   .nav-list a {
     text-decoration: none;
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.hero-img {
+  margin: 0 auto;
+  width: 90%;
+  display: block;
+  object-fit: cover;
+}
+
+.hero-details {
+  margin: 0 auto;
+  color: rgb(20, 49, 49);
+}
+
+.hero-details span {
+  color: brown;
+  font-size: 3em;
+  line-height: 0.6em;
+}
+
+@media (min-width: 480px) {
+  .hero {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-img {
+    width: 50%;
   }
 }
