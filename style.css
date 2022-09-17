@@ -22,6 +22,11 @@ textarea {
   color: inherit;
 }
 
+img {
+  display: block;
+  object-fit: cover;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -45,8 +50,7 @@ header {
 .container {
   width: 96%;
   max-width: 640px;
-  margin: 0 auto;
-  /* outline: 1px solid red; */
+  margin: 1em auto;
 }
 
 .nav-container {
@@ -89,6 +93,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  padding: 1em 0;
 }
 
 .hero-img {
@@ -117,5 +122,52 @@ header {
   }
   .hero-img {
     width: 50%;
+  }
+}
+
+.service {
+  padding: 1em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-header {
+  padding: 0.5em 1em;
+  border-radius: 10px 30px;
+  margin-bottom: 1.5em;
+  width: 100%;
+  background-color: rgb(240, 219, 219);
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 0.5em;
+  align-items: center;
+  background-color: rgb(240, 219, 219);
+}
+
+.single-service {
+  padding: 0.5em;
+  border-radius: 0.5em;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: 1px dotted rgb(240, 219, 219);
+}
+
+.single-service img {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 0.5em;
+}
+
+@media (min-width: 480px) {
+  .services {
+    flex-direction: row;
   }
 }
