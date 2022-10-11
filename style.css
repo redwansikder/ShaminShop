@@ -10,7 +10,9 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ul,
+li {
   margin: 0;
   padding: 0;
 }
@@ -32,64 +34,57 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  background-color: rgb(251, 244, 235);
 }
 
 header {
-  padding: 0;
+  padding: 1em 0;
   background-color: rgb(163, 173, 168);
 }
 
 .logo h2 {
   margin: 0;
   padding: 0;
+  color: brown;
 }
 
 .logo p {
   margin: 0;
   padding: 0;
+  opacity: 0.6;
+  line-height: 0.2em;
 }
 
 .container {
   width: 96%;
   max-width: 640px;
   margin: 0 auto;
-  /* margin-bottom: 2em; */
 }
 
 .nav-container {
   display: flex;
-  justify-content: space-between;
-}
-
-.ham {
-  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 480px) {
-  .ham {
-    display: none;
+  .nav-container {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
 .nav-list {
-  display: none;
+  display: flex;
+  gap: 2em;
+  list-style: none;
+  margin-top: 1em;
 }
 
-@media (min-width: 480px) {
-  .nav-list {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    width: 100%;
-  }
-
-  .nav-list li {
-    padding-left: 2em;
-  }
-
-  .nav-list a {
-    text-decoration: none;
-  }
+.nav-list a {
+  color: rgb(96, 109, 105);
+  text-decoration: none;
 }
 
 .hero {
@@ -115,6 +110,11 @@ header {
 .hero-details span {
   color: brown;
   font-size: 3em;
+}
+
+.hero-details p {
+  font-weight: 600;
+  color: brown;
 }
 
 @media (min-width: 480px) {
@@ -186,6 +186,15 @@ footer {
 }
 
 .footer-container {
-  padding: 0.2em 0;
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  padding: 1em 0;
   margin-top: auto;
+}
+
+@media (min-width: 480px) {
+  .footer-container {
+    justify-content: left;
+  }
 }
